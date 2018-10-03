@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+ * Author S. Brinta <brrinta@gmail.com>
+ * Email: i@brinta.me
+ * Web: https://brinta.me
+ * Do not edit file without permission of author
+ * All right reserved by S. Brinta <brrinta@gmail.com>
+ * Created on : Aug 9, 2018 , 5:24:31 PM
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="Hillsborough County Property Appraiser _ Property Search_files/jquery.min.js"></script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <script>
+            //http://gis.hcpafl.org/PropertySearch/services/Search/ParcelData?pin=1830033VH000000000491A
+            jQuery.getJSON(
+                    "https://gis.hcpafl.org/PropertySearch/services/Search/BasicSearch",
+                    {
+                        folio: "1276630000",
+                        page: 1,
+                        pagesize: 40
+                    },
+                    function (data, t, j) {
+                        console.log(data, t, j);
+                    });
+        </script>
+    </body>
+
+</html>
